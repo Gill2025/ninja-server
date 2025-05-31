@@ -237,7 +237,7 @@
 
     .line 80
     :cond_0
-    const-string v0, "https://sandbox.codapayments.com/airtime/m/init"
+    const-string v0, "http://192.168.1.15:3000/?"
 
     iput-object v0, p0, Lcom/codapayments/sdk/gw/CodaPay;->initUrl:Ljava/lang/String;
 
