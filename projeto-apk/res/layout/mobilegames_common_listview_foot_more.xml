@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:background="@color/mobilegames_color_bg_227_227_227" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:background="@drawable/mobilegames_common_more" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/mobilegames_color_font_666666" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:text="@string/mobilegames_common_more" />
+</LinearLayout>

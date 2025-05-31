@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/mobilegames_color_bg_227_227_227" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/wrapper" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <Button android:id="@id/buyItBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="Buy a Thing" android:onClick="onBuyPressed" />
+        <Button android:id="@id/futurePaymentBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="Future Payment Consent" android:onClick="onFuturePaymentPressed" />
+        <Button android:id="@id/futurePaymentPurchaseBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="Future Payment Purchase" android:onClick="onFuturePaymentPurchasePressed" />
+        <Button android:id="@id/profileSharingBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="Profile Sharing Consent" android:onClick="onProfileSharingPressed" />
+    </LinearLayout>
+</RelativeLayout>

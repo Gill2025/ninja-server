@@ -1,0 +1,465 @@
+.class public final Lcom/vtcpay/lib/g/u;
+.super Landroid/support/v4/app/Fragment;
+
+
+# static fields
+.field private static a:Lcom/vtcpay/lib/g/u;
+
+.field private static j:Ljava/lang/String;
+
+.field private static k:Ljava/lang/String;
+
+.field private static l:Ljava/lang/String;
+
+
+# instance fields
+.field private b:Lcom/vtcpay/lib/g/x;
+
+.field private c:Landroid/app/ProgressDialog;
+
+.field private d:Lcom/vtcpay/lib/model/BankAccountList;
+
+.field private e:I
+
+.field private f:Ljava/lang/String;
+
+.field private g:Ljava/lang/String;
+
+.field private h:Ljava/lang/String;
+
+.field private i:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/vtcpay/lib/g/u;->a:Lcom/vtcpay/lib/g/u;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/vtcpay/lib/g/u;)I
+    .locals 1
+
+    iget v0, p0, Lcom/vtcpay/lib/g/u;->e:I
+
+    return v0
+.end method
+
+.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/vtcpay/lib/g/u;
+    .locals 1
+
+    sget-object v0, Lcom/vtcpay/lib/g/u;->a:Lcom/vtcpay/lib/g/u;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/vtcpay/lib/g/u;
+
+    invoke-direct {v0}, Lcom/vtcpay/lib/g/u;-><init>()V
+
+    sput-object v0, Lcom/vtcpay/lib/g/u;->a:Lcom/vtcpay/lib/g/u;
+
+    :cond_0
+    sput-object p1, Lcom/vtcpay/lib/g/u;->j:Ljava/lang/String;
+
+    sput-object p2, Lcom/vtcpay/lib/g/u;->k:Ljava/lang/String;
+
+    sput-object p3, Lcom/vtcpay/lib/g/u;->l:Ljava/lang/String;
+
+    sget-object v0, Lcom/vtcpay/lib/g/u;->a:Lcom/vtcpay/lib/g/u;
+
+    return-object v0
+.end method
+
+.method static synthetic a()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/vtcpay/lib/g/u;->j:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic b()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/vtcpay/lib/g/u;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/vtcpay/lib/g/u;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/vtcpay/lib/g/u;)Lcom/vtcpay/lib/g/x;
+    .locals 1
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    return-object v0
+.end method
+
+.method static synthetic c()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/vtcpay/lib/g/u;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcom/vtcpay/lib/g/u;)I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method static synthetic e(Lcom/vtcpay/lib/g/u;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/vtcpay/lib/g/u;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->h:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic g(Lcom/vtcpay/lib/g/u;)Landroid/app/ProgressDialog;
+    .locals 1
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->c:Landroid/app/ProgressDialog;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 6
+
+    invoke-virtual {p0}, Lcom/vtcpay/lib/g/u;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    const-string v1, ""
+
+    sget-object v2, Lcom/vtcpay/lib/d/b;->ad:[Ljava/lang/String;
+
+    sget v3, Lcom/vtcpay/lib/util/e;->e:I
+
+    aget-object v2, v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v1, v2, v3}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vtcpay/lib/g/u;->c:Landroid/app/ProgressDialog;
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v1, v1, Lcom/vtcpay/lib/g/x;->a:Landroid/widget/LinearLayout;
+
+    invoke-static {v0, v1}, Lcom/vtcpay/lib/util/e;->a(ZLandroid/view/View;)V
+
+    invoke-static/range {p1 .. p13}, Lcom/vtcpay/b/a/a;->a(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/vtcpay/b/b/e;
+
+    invoke-virtual {p0}, Lcom/vtcpay/lib/g/u;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v2
+
+    const-class v3, Lcom/vtcpay/lib/model/ResponsePayBankConfirm;
+
+    const/4 v4, 0x1
+
+    new-instance v5, Lcom/vtcpay/lib/g/w;
+
+    invoke-direct {v5, p0}, Lcom/vtcpay/lib/g/w;-><init>(Lcom/vtcpay/lib/g/u;)V
+
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vtcpay/b/b/e;-><init>(Landroid/app/Activity;Ljava/lang/Class;ZLcom/vtcpay/b/b/b;)V
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
+
+    invoke-virtual {v1, v2}, Lcom/vtcpay/b/b/e;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    return-void
+.end method
+
+.method public final onActivityCreated(Landroid/os/Bundle;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Lcom/vtcpay/lib/g/u;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    const-string v1, "KEY_ORDER_MODEL"
+
+    invoke-static {v0, v1}, Lcom/vtcpay/lib/util/e;->b(Landroid/content/Context;Ljava/lang/String;)Lcom/vtcpay/lib/model/ResponseOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/vtcpay/lib/g/u;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v1
+
+    const-string v2, "KEY_BANK_ACCOUNT_MODEL"
+
+    invoke-static {v1, v2}, Lcom/vtcpay/lib/util/e;->c(Landroid/content/Context;Ljava/lang/String;)Lcom/vtcpay/lib/model/BankAccountList;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/vtcpay/lib/g/u;->d:Lcom/vtcpay/lib/model/BankAccountList;
+
+    invoke-virtual {v0}, Lcom/vtcpay/lib/model/ResponseOrder;->getAmount()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/vtcpay/lib/g/u;->e:I
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->d:Lcom/vtcpay/lib/model/BankAccountList;
+
+    invoke-virtual {v0}, Lcom/vtcpay/lib/model/BankAccountList;->getBankAccount()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vtcpay/lib/g/u;->f:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->d:Lcom/vtcpay/lib/model/BankAccountList;
+
+    invoke-virtual {v0}, Lcom/vtcpay/lib/model/BankAccountList;->getBankAccountName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vtcpay/lib/g/u;->g:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->d:Lcom/vtcpay/lib/model/BankAccountList;
+
+    invoke-virtual {v0}, Lcom/vtcpay/lib/model/BankAccountList;->getOpenDate()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vtcpay/lib/g/u;->i:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->i:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->i:Ljava/lang/String;
+
+    const-string v1, "-"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const/4 v2, 0x1
+
+    aget-object v2, v0, v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vtcpay/lib/g/u;->i:Ljava/lang/String;
+
+    :cond_0
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->d:Lcom/vtcpay/lib/model/BankAccountList;
+
+    invoke-virtual {v0}, Lcom/vtcpay/lib/model/BankAccountList;->getOtherInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->d:Lcom/vtcpay/lib/model/BankAccountList;
+
+    invoke-virtual {v0}, Lcom/vtcpay/lib/model/BankAccountList;->getOtherInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vtcpay/lib/g/u;->h:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v0, v0, Lcom/vtcpay/lib/g/x;->b:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/vtcpay/lib/g/u;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->f:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/vtcpay/lib/util/e;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v1, v1, Lcom/vtcpay/lib/g/x;->e:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lcom/vtcpay/lib/g/u;->g:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v1, v1, Lcom/vtcpay/lib/g/x;->f:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v0, v0, Lcom/vtcpay/lib/g/x;->d:Landroid/widget/TextView;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/vtcpay/lib/g/u;->e:I
+
+    invoke-static {v2}, Lcom/vtcpay/lib/util/e;->a(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v2, " VN\u0110"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v0, v0, Lcom/vtcpay/lib/g/x;->c:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/vtcpay/lib/g/u;->i:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v0, v0, Lcom/vtcpay/lib/g/x;->g:Landroid/widget/Button;
+
+    new-instance v1, Lcom/vtcpay/lib/g/v;
+
+    invoke-direct {v1, p0}, Lcom/vtcpay/lib/g/v;-><init>(Lcom/vtcpay/lib/g/u;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
+.method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 2
+
+    new-instance v0, Lcom/vtcpay/lib/g/x;
+
+    invoke-virtual {p0}, Lcom/vtcpay/lib/g/u;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/vtcpay/lib/g/x;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    invoke-virtual {p0}, Lcom/vtcpay/lib/g/u;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v1, v1, Lcom/vtcpay/lib/g/x;->a:Landroid/widget/LinearLayout;
+
+    invoke-static {v0, v1}, Lcom/vtcpay/lib/util/e;->a(Landroid/app/Activity;Landroid/view/View;)V
+
+    invoke-virtual {p0}, Lcom/vtcpay/lib/g/u;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setSoftInputMode(I)V
+
+    iget-object v0, p0, Lcom/vtcpay/lib/g/u;->b:Lcom/vtcpay/lib/g/x;
+
+    iget-object v0, v0, Lcom/vtcpay/lib/g/x;->a:Landroid/widget/LinearLayout;
+
+    return-object v0
+.end method

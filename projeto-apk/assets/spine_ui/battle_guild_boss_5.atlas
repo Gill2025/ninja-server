@@ -1,0 +1,20 @@
+
+battle_guild_boss_5.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+wuwei
+  rotate: false
+  xy: 2, 294
+  size: 674, 611
+  orig: 674, 611
+  offset: 0, 0
+  index: -1
+wuwei_texiao
+  rotate: false
+  xy: 2, 2
+  size: 674, 290
+  orig: 674, 290
+  offset: 0, 0
+  index: -1

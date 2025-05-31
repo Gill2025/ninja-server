@@ -1,0 +1,20 @@
+
+battle_guild_boss_4.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+siwei_1
+  rotate: true
+  xy: 2, 2
+  size: 457, 510
+  orig: 457, 510
+  offset: 0, 0
+  index: -1
+siwei_1_texiao
+  rotate: false
+  xy: 514, 188
+  size: 457, 271
+  orig: 457, 271
+  offset: 0, 0
+  index: -1

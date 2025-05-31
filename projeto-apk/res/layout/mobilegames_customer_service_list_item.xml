@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/mobilegames_color_font_666666" android:ellipsize="end" android:id="@id/mobilegames_customer_service_list_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/mobilegames_color_font_666666" android:id="@id/mobilegames_customer_service_list_item_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/mobilegames_customer_service_list_item_title" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/mobilegames_color_font_666666" android:gravity="center" android:id="@id/mobilegames_customer_service_list_item_other" android:background="@drawable/mobilegames_common_notice_bg" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/mobilegames_customer_service_list_item_title" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/mobilegames_customer_service_q_details_item_headimg_right" android:background="@drawable/mobilegames_customer_logo_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:id="@id/mobilegames_customer_service_q_details_item_username_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/mobilegames_customer_notice13" android:layout_toLeftOf="@id/mobilegames_customer_service_q_details_item_headimg_right" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/mobilegames_customer_service_q_details_item_headimg_right" android:layout_below="@id/mobilegames_customer_service_q_details_item_username_right">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/mobilegames_customer_service_q_details_item_content_status_right" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:background="@drawable/mobilegames_customer_send_status" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ProgressBar android:layout_gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmall" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:id="@id/mobilegames_customer_service_q_details_item_content_right" android:background="@drawable/mobilegames_customer_chart_bg_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+            <TextView android:textSize="18.0sp" android:textColor="@color/mobilegames_color_font_666666" android:id="@id/mobilegames_customer_service_q_details_item_content_word_right" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/mobilegames_customer_service_q_details_item_content_image_local_right" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="200.0dip" android:src="@drawable/mobilegames_customer_bg_default" android:scaleType="centerInside" android:contentDescription="@string/mobilegames_common_imageview_disctiption" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

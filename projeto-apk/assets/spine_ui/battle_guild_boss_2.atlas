@@ -1,0 +1,13 @@
+
+battle_guild_boss_2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+erwei
+  rotate: false
+  xy: 2, 2
+  size: 462, 451
+  orig: 462, 451
+  offset: 0, 0
+  index: -1

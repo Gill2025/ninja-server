@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:padding="20.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/mobilegames_dimen_common_button_font_size_24" android:textColor="@color/mobilegames_color_font_9f9f9f" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobilegames_bind_notice_connectto" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/mobilegames_bind_items" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <TextView android:id="@id/mobilegames_bind_facebook" android:background="@drawable/mobilegames_login_button_facebook" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_alignParentLeft="true" />
+        <TextView android:id="@id/mobilegames_bind_oas" android:background="@drawable/mobilegames_login_button_oas" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_centerInParent="true" />
+        <TextView android:id="@id/mobilegames_bind_google" android:background="@drawable/mobilegames_login_button_google" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <Button android:textSize="@dimen/mobilegames_dimen_common_button_font_size_24" android:textColor="@color/mobilegames_color_font_FFFFFF" android:layout_gravity="center_horizontal" android:id="@id/mobilegames_bind_notuser" android:background="@drawable/mobilegames_common_00aed9_017baa" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/mobilegames_dimen_login_button_height" android:layout_marginTop="40.0dip" android:text="@string/mobilegames_bind_notice_error5" android:onClick="onClick" />
+</LinearLayout>

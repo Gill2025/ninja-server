@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/mobilegames_pay_item_bg_unfocus" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="#ff666666" android:gravity="center_vertical" android:id="@id/mobilegames_pay_item_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:minHeight="60.0dip" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="55.0dip" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="center_vertical" android:background="@drawable/mobilegames_pay_item_diamond_logo" android:layout_width="14.0dip" android:layout_height="14.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff666666" android:id="@id/mobilegames_pay_item_d" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/mobilegames_pay_item_addcoins" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="center_vertical" android:background="@drawable/mobilegames_pay_item_diamond_logo_red" android:layout_width="14.0dip" android:layout_height="14.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff666666" android:id="@id/mobilegames_pay_item_d2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="#ff666666" android:gravity="center|left" android:id="@id/mobilegames_pay_item_connect" android:layout_width="15.0dip" android:layout_height="fill_parent" android:text="@string/mobilegames_pay_item_connect_add" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:id="@id/mobilegames_pay_item_hot" android:background="@drawable/mobilegames_payway_hot" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+</RelativeLayout>

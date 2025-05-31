@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mobilegames.sdk.base.utils.MyImageView android:id="@id/mobilegames_pictrue_list_item_img" android:layout_width="200.0dip" android:layout_height="200.0dip" android:scaleType="centerInside" android:layout_centerInParent="true" android:contentDescription="@string/mobilegames_common_imageview_disctiption" />
+    <TextView android:id="@id/mobilegames_pictrue_list_item_selected" android:background="@drawable/mobilegames_picture_selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

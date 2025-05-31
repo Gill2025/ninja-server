@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/mobilegames_common_list_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="80.0dip" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <TextView android:id="@id/mobilegames_pcenter_fuc_item_img" android:background="@drawable/mobilegames_pcenter_item_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="20.0sp" android:id="@id/mobilegames_pcenter_fuc_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/mobilegames_pcenter_notice_1" style="@style/mobilegames_text_style_black9f9f9f" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="80.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <TextView android:layout_gravity="center" android:background="@drawable/mobilegames_login_button_facebook" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginRight="10.0dip" />
+        <TextView android:layout_gravity="center" android:background="@drawable/mobilegames_login_button_oas" android:visibility="gone" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginRight="10.0dip" />
+        <TextView android:layout_gravity="center" android:background="@drawable/mobilegames_login_button_google" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginRight="10.0dip" />
+        <TextView android:layout_gravity="center" android:id="@id/mobilegames_pcenter_fuc_item_tag" android:background="@drawable/mobilegames_menu_ico_tag" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" />
+        <TextView android:textSize="20.0sp" android:id="@id/mobilegames_pcenter_fuc_item_notice" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/mobilegames_text_style_bule00aed9" />
+        <TextView android:background="@drawable/mobilegames_common_jiantou" android:layout_width="10.0dip" android:layout_height="17.0dip" />
+    </LinearLayout>
+</RelativeLayout>

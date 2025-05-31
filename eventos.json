@@ -1,0 +1,30 @@
+{
+  "eventos": [
+    {
+      "id": 1,
+      "nome": "Festival dos Kage",
+      "descricao": "Complete missões pra ganhar Hokage Naruto!",
+      "inicio": "2025-06-01T00:00:00Z",
+      "fim": "2025-06-07T23:59:59Z",
+      "ativo": true,
+      "premios": [
+        "Hokage_Hiruzen",
+        "Hokage_Minato",
+        "Moedas x1000"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Missão Anbu",
+      "descricao": "Derrote inimigos noturnos pra ganhar equipamentos raros!",
+      "inicio": "2025-06-05T00:00:00Z",
+      "fim": "2025-06-12T23:59:59Z",
+      "ativo": false,
+      "premios": [
+        "Anbu_Shikamaru",
+        "Armadura ANBU",
+        "Chakra Ilimitado (3 dias)"
+      ]
+    }
+  ]
+}

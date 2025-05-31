@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Eventos</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background-color: #f4f4f4; }
+        h1 { color: #333; }
+        .evento { border: 1px solid #ccc; background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="checkbox"] { zoom: 1.5; margin-right: 10px; }
+        button { margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🎮 Administração de Eventos</h1>
+
+    <div id="eventos"></div>
+
+    <button onclick="addEvento()">+ Adicionar Novo Evento</button>
+
+    <script>
+        async function loadEvents() {
+            try {
+                const res = await fetch('/api/eventos');
+                const data = await res.json();
+                const container = document.getElementById('eventos');
+                container.innerHTML = '';
+
+                data.eventos.forEach((evento, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'evento';
+                    div.innerHTML = `
+                        <label>
+                            <input type="checkbox" ${evento.ativo ? 'checked' : ''} onchange="toggleActive(${index}, this.checked)">
+                            <strong>${evento.nome}</strong>
+                        </label>
+                        <p>${evento.descricao}</p>
+                    `;
+                    container.appendChild(div);
+                });
+            } catch (err) {
+                console.error("Erro ao carregar eventos:", err);
+            }
+        }
+
+        async function toggleActive(index, isActive) {
+            try {
+                const res = await fetch('/api/eventos', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        ...await (await fetch('/api/eventos')).json(),
+                        eventos: (await (await fetch('/api/eventos')).json()).eventos.map((e, i) =>
+                            i === index ? { ...e, ativo: isActive } : e
+                        )
+                    })
+                });
+
+                alert('Evento atualizado!');
+            } catch (err) {
+                alert('Erro ao atualizar evento.');
+                console.error(err);
+            }
+        }
+
+        async function addEvento() {
+            const nome = prompt("Digite o nome do evento:");
+            if (!nome) return;
+
+            const novoEvento = {
+                id: Date.now(), // ID único baseado no horário
+                nome: nome,
+                descricao: "Descrição do evento",
+                inicio: "2025-06-01T00:00:00Z",
+                fim: "2025-06-07T23:59:59Z",
+                ativo: true,
+                premios: ["Personagem Exclusivo", "Moedas x1000"]
+            };
+
+            try {
+                const dados = await (await fetch('/api/eventos')).json();
+                dados.eventos.push(novoEvento);
+
+                const res = await fetch('/api/eventos', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(dados)
+                });
+
+                alert("Evento adicionado!");
+                loadEvents();
+            } catch (err) {
+                alert("Erro ao adicionar evento.");
+                console.error(err);
+            }
+        }
+
+        // Carrega os eventos ao abrir a página
+        loadEvents();
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/mobilegames_common_head" android:background="@color/mobilegames_color_bg_9_131_168" android:layout_width="fill_parent" android:layout_height="90.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/mobilegames_common_head_back" android:layout_width="85.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+        <TextView android:background="@drawable/mobilegames_common_head_back" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <TextView android:id="@id/mobilegames_common_head_logo" android:background="@drawable/mobilegames_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/mobilegames_dimen_head_font_size_30" android:textStyle="bold" android:textColor="@color/mobilegames_color_font_FFFFFF" android:id="@id/mobilegames_common_head_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/mobilegames_common_head_function" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <TextView android:background="@drawable/mobilegames_menu_ico_charge" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

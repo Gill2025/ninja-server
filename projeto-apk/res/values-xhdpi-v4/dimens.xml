@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mobilegames_dimen_login_notice_height">80.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_notice_margin">28.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_textview_wh">120.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_textview_wh_small">40.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_button_height">40.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_input_wh">300.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_input_closebtn_wh">16.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_input_padding_40">40.0dip</dimen>
+    <dimen name="mobilegames_dimen_menu_control_wh">102.0px</dimen>
+    <dimen name="mobilegames_dimen_menu_control_padding">6.0px</dimen>
+    <dimen name="mobilegames_dimen_menu_item_w">86.0px</dimen>
+    <dimen name="com_facebook_picker_divider_width">2.0px</dimen>
+    <dimen name="mobilegames_dimen_guide_og_margin_left_0">85.0dip</dimen>
+    <dimen name="mobilegames_dimen_guide_og_margin_left_1">136.0dip</dimen>
+    <dimen name="mobilegames_dimen_guide_og_margin_left_2">187.0dip</dimen>
+    <dimen name="mobilegames_dimen_guide_og_margin_left_3">238.0dip</dimen>
+    <dimen name="mobilegames_dimen_guide_og_margin_left_4">289.0dip</dimen>
+    <dimen name="mobilegames_dimen_guide_bind_margin_pad_top1">210.0dip</dimen>
+    <dimen name="mobilegames_dimen_guide_bind_margin_pad_top2">500.0dip</dimen>
+    <dimen name="mobilegames_dimen_guide_bind_margin_pad_top2_p">710.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_textview_wh_pad">180.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_notice_height_pad">160.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_button_height_pad">70.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_input_wh_pad">600.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_notice_margin_pad">50.0dip</dimen>
+    <dimen name="mobilegames_dimen_login_textview_wh_small_pad">130.0dip</dimen>
+</resources>
