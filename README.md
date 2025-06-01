@@ -1,0 +1,2 @@
+# ninja-server
+jogo reativado
