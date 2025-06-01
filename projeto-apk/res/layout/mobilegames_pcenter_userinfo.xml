@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/mobilegames_pcenter_pic" android:background="@drawable/mobilegames_login_button_guest" android:layout_width="72.0dip" android:layout_height="72.0dip" />
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip">
-        <TextView android:textSize="24.0sp" android:gravity="center_vertical" android:id="@id/mobilegames_pcenter_user" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/mobilegames_text_style_bule00aed9" />
-        <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/mobilegames_pcenter_uid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/mobilegames_text_style_black9f9f9f" />
-    </LinearLayout>
-</LinearLayout>

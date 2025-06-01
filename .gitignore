@@ -1,0 +1,9 @@
+# Pastas desnecessárias no GitHub
+node_modules/
+projeto-apk/
+*.apk
+*.jar
+*.dex
+*.iml
+.idea/
+.vscode/

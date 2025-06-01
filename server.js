@@ -5,27 +5,9 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-
-// Middleware
 app.use(cors());
-app.use(bodyParser.json({ limit: '11mb' }));
+app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// Carrega dados iniciais
-let compras = [];
-
-// Função pra salvar compras em arquivo JSON
-function salvarCompras() {
-    fs.writeFileSync(path.join(__dirname, 'compras.json'), JSON.stringify(compras, null, 2), 'utf-8');
-}
-
-// Carrega compras salvas (se existirem)
-try {
-    const data = fs.readFileSync(path.join(__dirname, 'compras.json'), 'utf-8');
-    compras = JSON.parse(data) || [];
-} catch (e) {
-    compras = [];
-}
 
 // Simulando resposta do servidor original
 app.get('/', (req, res) => {
@@ -92,6 +74,7 @@ app.get('/airtime/m/init', (req, res) => {
                 <h3>${pixKey}</h3>
                 <p><em>${merchantName}</em></p>
                 <p>Obrigado pela sua contribuição! 💸</p>
+                <p><small>Um administrador precisa aprovar a compra.</small></p>
             </body>
         </html>
     `);
@@ -105,16 +88,20 @@ app.get('/eventos', (req, res) => {
             return res.status(500).send({ code: 500, message: "Erro ao carregar eventos" });
         }
 
-        const eventos = JSON.parse(data);
-        const eventosAtivos = eventos.eventos.filter(e => e.ativo);
+        try {
+            const eventos = JSON.parse(data);
+            const eventosAtivos = eventos.eventos.filter(e => e.ativo);
 
-        res.send({
-            code: 200,
-            message: "Eventos carregados com sucesso!",
-            data: {
-                eventos: eventosAtivos
-            }
-        });
+            res.send({
+                code: 200,
+                message: "Eventos carregados com sucesso!",
+                data: {
+                    eventos: eventosAtivos
+                }
+            });
+        } catch (e) {
+            res.send({ code: 500, message: "Erro ao processar eventos" });
+        }
     });
 });
 
@@ -139,6 +126,22 @@ app.post('/api/eventos', express.json(), (req, res) => {
     });
 });
 
+// Variável global de compras
+let compras = [];
+
+// Função pra salvar compras em arquivo JSON
+function salvarCompras() {
+    fs.writeFileSync(path.join(__dirname, 'compras.json'), JSON.stringify(compras, null, 2), 'utf-8');
+}
+
+// Carrega compras salvas (se existirem)
+try {
+    const data = fs.readFileSync(path.join(__dirname, 'compras.json'), 'utf-8');
+    compras = JSON.parse(data) || [];
+} catch (e) {
+    compras = [];
+}
+
 // Rota do painel de administração
 app.get('/admin', (req, res) => {
     let html = `
@@ -147,4 +150,75 @@ app.get('/admin', (req, res) => {
             <title>Painel - Naruto Liga dos Poderosos</title>
             <meta charset="utf-8">
             <style>
-                body { font-family: Arial;
+                body { font-family: Arial; background: #f0f0f0; padding: 20px; }
+                h1 { color: #333; }
+                table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
+                .btn-aprovar { background: #28a745; color: white; border: none; padding: 8px 16px; cursor: pointer; }
+                .pendente { background: #fff3cd; }
+            </style>
+        </head>
+        <body>
+            <h1>🎮 Painel de Admin - Naruto Liga dos Poderosos</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Método</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+    `;
+
+    compras.forEach(compra => {
+        html += `
+            <tr class="${compra.status === 'pendente' ? 'pendente' : ''}">
+                <td>${compra.id}</td>
+                <td>${compra.data}</td>
+                <td>${compra.valor}</td>
+                <td>${compra.metodo}</td>
+                <td>${compra.status}</td>
+                <td>
+                    <button class="btn-aprovar" onclick="aprovar(${compra.id})">✔️ Aprovar</button>
+                </td>
+            </tr>
+        `;
+    });
+
+    html += `
+            </table>
+            <script>
+                function aprovar(id) {
+                    fetch('/admin/aprovar?id=' + id)
+                        .then(res => res.text())
+                        .then(() => location.reload());
+                }
+            </script>
+        </body>
+        </html>
+    `;
+
+    res.send(html);
+});
+
+// Rota pra aprovar compra
+app.get('/admin/aprovar', (req, res) => {
+    const id = parseInt(req.query.id);
+    const index = compras.findIndex(c => c.id === id);
+
+    if (index !== -1) {
+        compras[index].status = 'aprovado';
+        salvarCompras();
+        res.redirect('/admin');
+    } else {
+        res.send('Compra não encontrada!');
+    }
+});
+
+// Iniciar servidor
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`✅ Servidor rodando na porta ${PORT}`);
+});

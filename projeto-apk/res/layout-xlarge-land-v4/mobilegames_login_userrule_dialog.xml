@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:background="#ffffffff" android:layout_width="500.0dip" android:layout_height="400.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <WebView android:layout_gravity="center_horizontal" android:id="@id/mobilegames_login_userrule_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" />
-    <LinearLayout android:gravity="center" android:id="@id/mobilegames_login_userrule_close" android:layout_width="52.0dip" android:layout_height="52.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
-        <TextView android:background="@drawable/mobilegames_common_close" android:layout_width="@dimen/mobilegames_dimen_common_close_bg_wh" android:layout_height="@dimen/mobilegames_dimen_common_close_bg_wh" />
-    </LinearLayout>
-    <TextView android:background="@drawable/mobilegames_common_box_grey" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</RelativeLayout>

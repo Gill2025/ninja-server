@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="@color/mobilegames_color_font_FFFFFF" android:gravity="center" android:id="@id/mobilegames_customer_service_q_details_item_notice_title" android:background="@drawable/mobilegames_common_bg_209_209_209" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="36.0dip" android:text="@string/mobilegames_customer_notice3" />
-</LinearLayout>

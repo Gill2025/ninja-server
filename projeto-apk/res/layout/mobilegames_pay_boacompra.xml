@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/mobilegames_color_bg_227_227_227" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <include layout="@layout/mobilegames_common_layout_head" />
-        <LinearLayout android:orientation="horizontal" android:id="@id/mobilegames_pay_boacompra_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    </LinearLayout>
-</FrameLayout>
