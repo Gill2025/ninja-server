@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(cors());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -101,24 +102,6 @@ app.get('/airtime/m/init', (req, res) => {
             </body>
         </html>
     `);
-});
-
-// Rota pra liberar itens após compra
-app.get('/itens', (req, res) => {
-    if (compras.some(c => c.status === 'aprovado')) {
-        return res.send({
-            code: 200,
-            message: "Itens liberados!",
-            data: {
-                items: ["Hokage_Naruto", "Moedas x1000", "Chakra Ilimitado"]
-            }
-        });
-    }
-
-    res.send({
-        code: 400,
-        message: "Nenhuma compra aprovada ainda."
-    });
 });
 
 // Painel web de administração
