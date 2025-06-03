@@ -26,7 +26,7 @@ try {
     compras = [];
 }
 
-// Rota de Login simulado
+// Rota principal - Login simulado
 app.get('/', (req, res) => {
     const query = req.query;
 
