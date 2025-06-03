@@ -26,7 +26,7 @@ try {
     compras = [];
 }
 
-// Rota principal - Login simulado
+// Rota de Login simulado
 app.get('/', (req, res) => {
     const query = req.query;
 
@@ -41,14 +41,6 @@ app.get('/', (req, res) => {
                 chakra: 1000,
                 success: true
             }
-        });
-    }
-
-    if (query.a === 'Login' && query.m === 'GetbackPwd') {
-        return res.send({
-            code: 200,
-            message: 'Senha recuperada!',
-            success: true
         });
     }
 

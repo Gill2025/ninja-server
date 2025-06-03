@@ -33,4 +33,4 @@ def process_smali_files(root_dir):
 if __name__ == '__main__':
     smali_folder = 'projeto-apk/smali'
     process_smali_files(smali_folder)
-    print("✅ URLs atualizadas com sucesso!")
+    print("✅ URLs atualizadas para https://ninja-server-3.onrender.com")
