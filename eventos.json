@@ -7,7 +7,7 @@
       "inicio": "2025-06-01T00:00:00Z",
       "fim": "2025-06-07T23:59:59Z",
       "ativo": true,
-      "premios": ["Hokage_Hiruzen", "Moedas x1000"]
+      "premios": ["Hokage_Hiruzen", "Moedas x1000", "Chakra Ilimitado (3 dias)"]
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "inicio": "2025-06-05T00:00:00Z",
       "fim": "2025-06-12T23:59:59Z",
       "ativo": false,
-      "premios": ["Anbu_Shikamaru", "Armadura ANBU", "Chakra Ilimitado (3 dias)"]
+      "premios": ["Anbu_Shikamaru", "Armadura ANBU", "Selo do Shodai"]
     }
   ]
 }
